@@ -99,8 +99,8 @@ const Table = () => {
 
   //Overall Price
   useEffect(() => {
-    setPrice(daysPrice + (haveTicket ? ticketPrice : 0) + subjectPrice + schoolLevelPrice)
-  }, [daysPrice, ticketPrice, subjectPrice, schoolLevelPrice, haveTicket])
+    setPrice(daysPrice + (haveTicket ? ticketPrice : 0) + subjectPrice + schoolLevelPrice + activitiesPrice)
+  }, [daysPrice, ticketPrice, subjectPrice, schoolLevelPrice, haveTicket, activitiesPrice])
 
   return (
     <main>
@@ -141,6 +141,7 @@ const Table = () => {
           <button onClick={() => changeSchoolLevel('Fundamental 2')}>Fundamental 2</button>
           <button onClick={() => changeSchoolLevel('Ensino Médio')}>Ensino Médio</button>
         </section>
+        <hr/>
         <section>
           <h1>Atividades</h1>
           <p>
